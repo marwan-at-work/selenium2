@@ -75,7 +75,7 @@ func newRequest(method string, url string, data []byte) (*http.Request, error) {
 		return nil, err
 	}
 	if data != nil {
-		request.Header.Add("Content-Type", jsonContentType)
+		request.Header.Add("Content-Type", jsonContentType+"; charset=utf-8")
 	}
 	return request, nil
 }
